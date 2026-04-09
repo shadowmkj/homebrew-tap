@@ -1,25 +1,25 @@
 class Leetrs < Formula
   desc "A command-line tool to interact with LeetCode."
   homepage "https://github.com/shadowmkj/leetrs"
-  version "1.0.3"
+  version "1.0.4"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/shadowmkj/leetrs/releases/download/v1.0.3/leetrs-aarch64-apple-darwin.tar.xz"
-      sha256 "a4a05b687ccff6173addeccc479fc16abd053c26d03fb76fabf920e7861c94bb"
+      url "https://github.com/shadowmkj/leetrs/releases/download/v1.0.4/leetrs-aarch64-apple-darwin.tar.xz"
+      sha256 "c5e2f20ec1d004d73ce28b9c0e40c94dc019cb28f49e504a6766a3c7d3775d41"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/shadowmkj/leetrs/releases/download/v1.0.3/leetrs-x86_64-apple-darwin.tar.xz"
-      sha256 "e6fd0d3a8b9fd3f0cc9c9cd4859fa86a95d3dcaa28cc31868763b834baf0172a"
+      url "https://github.com/shadowmkj/leetrs/releases/download/v1.0.4/leetrs-x86_64-apple-darwin.tar.xz"
+      sha256 "62b496f1ae40e1cc974990a81c56a44c31c2a99dd6b40d6f184ecf27f597abd8"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/shadowmkj/leetrs/releases/download/v1.0.3/leetrs-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "245223d9b59e52cf2e2eb7545cd86b61310ec8de8a5478bd82183ca910d844ba"
+      url "https://github.com/shadowmkj/leetrs/releases/download/v1.0.4/leetrs-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "9bd06dad58b586b24ed07ca5ee8bdf5a232b42b85fed32347878a0b981926ec9"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/shadowmkj/leetrs/releases/download/v1.0.3/leetrs-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "5fab937ea722edb475acb285bdb0a9de8dd52ba1f734ac2662197f8716523f0f"
+      url "https://github.com/shadowmkj/leetrs/releases/download/v1.0.4/leetrs-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "0e56a5183a6750019235160a8899c92e4d862aa82946e28bf9dba1c1d491c7f0"
     end
   end
   license "MIT"
