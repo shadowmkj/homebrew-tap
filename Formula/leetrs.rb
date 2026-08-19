@@ -1,25 +1,25 @@
 class Leetrs < Formula
   desc "A command-line tool to interact with LeetCode."
   homepage "https://github.com/shadowmkj/leetrs"
-  version "1.0.18"
+  version "1.1.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/shadowmkj/leetrs/releases/download/v1.0.18/leetrs-aarch64-apple-darwin.tar.xz"
-      sha256 "16be8154e57636072ea959ffcbe84d5df69116f5dd7d096c81c74ef20caccd09"
+      url "https://github.com/shadowmkj/leetrs/releases/download/v1.1.0/leetrs-aarch64-apple-darwin.tar.xz"
+      sha256 "c4f877dd0fb4d0289d4ddc8aeaa65bae41beb192eda5042feb0c832707790ef5"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/shadowmkj/leetrs/releases/download/v1.0.18/leetrs-x86_64-apple-darwin.tar.xz"
-      sha256 "c56fe968200a7e530baf6219acad02c3cc7a8c1109c452029a5ade52ceca6c7b"
+      url "https://github.com/shadowmkj/leetrs/releases/download/v1.1.0/leetrs-x86_64-apple-darwin.tar.xz"
+      sha256 "0b3800a73360106ca087dfaa60f2cca252243c170a43753a8a8895c6d6472e44"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/shadowmkj/leetrs/releases/download/v1.0.18/leetrs-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "0fe0ae89e2a1e2c1612bb22e6b21e0d9c824a097b5a0b18ce6a434ba24f45623"
+      url "https://github.com/shadowmkj/leetrs/releases/download/v1.1.0/leetrs-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "9fc8ffd79c233a3eefc0e0e014a3c25f4ae6e07bd42def77e479526ffee523c9"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/shadowmkj/leetrs/releases/download/v1.0.18/leetrs-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "adccc4f3b3a46c5c5de888f41019ded2302e2ae7969745639adf0e370c359271"
+      url "https://github.com/shadowmkj/leetrs/releases/download/v1.1.0/leetrs-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "889d35ba5e5a47f1a49b618644c77f8a80abf20b8c7f1fe79dc54572ac5c6460"
     end
   end
   license "MIT"
@@ -48,10 +48,18 @@ class Leetrs < Formula
   end
 
   def install
-    bin.install "leetrs" if OS.mac? && Hardware::CPU.arm?
-    bin.install "leetrs" if OS.mac? && Hardware::CPU.intel?
-    bin.install "leetrs" if OS.linux? && Hardware::CPU.arm?
-    bin.install "leetrs" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "leetrs"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "leetrs"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "leetrs"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "leetrs"
+    end
 
     install_binary_aliases!
 
