@@ -1,6 +1,6 @@
 cask "scribl" do
   version "0.1.0"
-  sha256 "50401c031e5927e4fb1e9df5492218a9236eaafa2cf044eef3ae3b1907a5357d"
+  sha256 "e47ec508fb8668a383ad8e4b1d4882e93167ed2bc441a115b04ce5d8496e217f"
 
   url "https://github.com/shadowmkj/scribl/releases/download/v#{version}/scribl_#{version}_aarch64.dmg"
   name "Scribl"
