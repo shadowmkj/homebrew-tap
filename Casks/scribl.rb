@@ -11,6 +11,13 @@ cask "scribl" do
 
   app "scribl.app"
 
+  postflight do
+    system_command "xattr",
+      args: ["-cr", "#{appdir}/scribl.app"]
+    system_command "codesign",
+      args: ["--force", "--deep", "--sign", "-", "#{appdir}/scribl.app"]
+  end
+
   zap trash: [
     "~/.config/scribl",
     "~/Library/Application Support/com.milan.scribl",
